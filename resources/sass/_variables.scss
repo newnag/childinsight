@@ -1,7 +1,33 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #FFFDF9; // Warm white background
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
+$headings-font-family: 'Fredoka', sans-serif;
+$font-size-base: 1rem;
 $line-height-base: 1.6;
+
+// Colors (Kid Friendly Palette)
+$primary:       #4D96FF; // Bright Blue
+$secondary:     #FFD93D; // Sunny Yellow
+$success:       #6BCB77; // Soft Green
+$info:          #6FD3F7; // Sky Blue
+$warning:       #FFC75F; // Orange-Yellow
+$danger:        #FF6B6B; // Soft Red
+$light:         #F9F9F9;
+$dark:          #2C3E50;
+
+// Border Radius (Softer, more rounded)
+$border-radius: 1rem;
+$border-radius-lg: 1.5rem;
+$border-radius-sm: 0.5rem;
+
+// Components
+$card-border-radius: $border-radius-lg;
+$btn-border-radius: $border-radius;
+$input-border-radius: $border-radius;
+
+// Navbar
+$navbar-light-color: rgba($dark, 0.7);
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;

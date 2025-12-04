@@ -20,11 +20,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+<body class="layout-fixed sidebar-expand-lg">
     <div class="app-wrapper">
         @auth
             <!-- Header -->
-            <nav class="app-header navbar navbar-expand bg-body">
+            <nav class="app-header navbar navbar-expand bg-white shadow-sm">
                 <div class="container-fluid">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -58,10 +58,11 @@
             </nav>
 
             <!-- Sidebar -->
-            <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+            <aside class="app-sidebar bg-white shadow-lg border-end" data-bs-theme="light">
                 <div class="sidebar-brand">
                     <a href="{{ url('/') }}" class="brand-link">
-                        <span class="brand-text fw-light">ChildInsight</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2919/2919604.png" alt="Logo" class="brand-image opacity-75 shadow-none">
+                        <span class="brand-text fw-bold text-primary">ChildInsight</span>
                     </a>
                 </div>
                 <div class="sidebar-wrapper">

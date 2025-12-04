@@ -41,7 +41,7 @@
                                     <div class="small text-muted">
                                         {{ $student->gender == 'male' ? 'ชาย' : 'หญิง' }}
                                         @if(!$student->center_id || !Auth::user()->center_id)
-                                            | <span class="text-info">{{ $student->center->name ?? '-' }}</span>
+                                            | <span class="text-primary fw-bold">{{ $student->center->name ?? '-' }}</span>
                                         @endif
                                     </div>
                                 </td>

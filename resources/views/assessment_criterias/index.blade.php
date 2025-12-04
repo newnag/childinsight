@@ -42,13 +42,11 @@
                     <tbody>
                         @php
                             $categories = [
-                                'Cleanliness' => 'ความสะอาด',
-                                'Safety' => 'ความปลอดภัย',
-                                'Child Care' => 'การดูแลเด็ก',
-                                'Nutrition' => 'โภชนาการ',
-                                'Documentation' => 'เอกสาร',
-                                'Innovation' => 'นวัตกรรม',
-                                'Other' => 'อื่นๆ'
+                                'ด้านความสะอาด' => 'ด้านความสะอาด',
+                                'ด้านการดูแลเด็ก' => 'ด้านการดูแลเด็ก',
+                                'ด้านเอกสารและการจัดการ' => 'ด้านเอกสารและการจัดการ',
+                                'ด้านนวัตกรรมการเรียนการสอน' => 'ด้านนวัตกรรมการเรียนการสอน',
+                                'อื่นๆ' => 'อื่นๆ'
                             ];
                         @endphp
                         @foreach($criterias as $index => $criteria)
@@ -57,8 +55,8 @@
                             <td>
                                 <select class="form-select" name="criterias[{{ $index }}][category]" required>
                                     <option value="" disabled>เลือกหมวดหมู่</option>
-                                    @foreach($categories as $eng => $thai)
-                                        <option value="{{ $eng }}" {{ $criteria->category == $eng ? 'selected' : '' }}>{{ $thai }}</option>
+                                    @foreach($categories as $value => $label)
+                                        <option value="{{ $value }}" {{ $criteria->category == $value ? 'selected' : '' }}>{{ $label }}</option>
                                     @endforeach
                                 </select>
                             </td>
@@ -100,13 +98,11 @@
             <td>
                 <select class="form-select" name="criterias[${rowIndex}][category]" required>
                     <option value="" disabled selected>เลือกหมวดหมู่</option>
-                    <option value="Cleanliness">ความสะอาด</option>
-                    <option value="Safety">ความปลอดภัย</option>
-                    <option value="Child Care">การดูแลเด็ก</option>
-                    <option value="Nutrition">โภชนาการ</option>
-                    <option value="Documentation">เอกสาร</option>
-                    <option value="Innovation">นวัตกรรม</option>
-                    <option value="Other">อื่นๆ</option>
+                    <option value="ด้านความสะอาด">ด้านความสะอาด</option>
+                    <option value="ด้านการดูแลเด็ก">ด้านการดูแลเด็ก</option>
+                    <option value="ด้านเอกสารและการจัดการ">ด้านเอกสารและการจัดการ</option>
+                    <option value="ด้านนวัตกรรมการเรียนการสอน">ด้านนวัตกรรมการเรียนการสอน</option>
+                    <option value="อื่นๆ">อื่นๆ</option>
                 </select>
             </td>
             <td>
